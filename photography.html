@@ -1,0 +1,162 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAMERA_ROLL | ZXUANCCC</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="space-page">
+
+    <div class="retro-window">
+        
+        <header class="title-bar">
+            <div class="title-bar-text">C:\Users\CHUNG\CameraRoll.exe</div>
+            <br>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize">_</button>
+                <button aria-label="Maximize">□</button>
+                <button aria-label="Close">X</button>
+            </div>
+        </header>
+
+        <nav class="nav-links">
+            <a href="index.html" class="nav-btn">DESKTOP</a>
+            <a href="biodata.html" class="nav-btn">USER_INFO</a>
+            <a href="education.html" class="nav-btn">SCHOOL_LOG</a>
+            <a href="space.html" class="nav-btn">GALAXY_EXE</a>
+            <a href="photography.html" class="nav-btn active">CAMERA_ROLL</a>
+            <a href="contact.html" class="nav-btn">SEND_MESSAGE</a>
+            <a href="aboutme.html" class="nav-btn">READ_ME</a>
+            <a href="form.html" class="nav-btn">VERIFICATION_FORM</a>
+        </nav>
+
+        <main class="window-content space-section">
+            <h1 class="main-title">:: CAMERA ARCHIVE // SHUTTER_LOGS ::</h1>
+
+            <div class="profile-container" style="text-align: center; margin-bottom: 30px;">
+                <div class="profile-pic-frame" style="margin-bottom: 15px;">
+                    <img src="asset/picture/camerarollpic.png" alt="Space Profile" style="max-width: 500px; border: 2px solid #800080; border-radius: 5px;">
+                </div>
+            </div>
+
+            <div class="explorer-card" id="camera-roll-manager">
+                
+                <div class="explorer-status-bar">
+                    <span class="explorer-path">C:\Users\CHUNG\Pictures\CAMERA_ROLL\</span>
+                    <span class="explorer-file-count">8 Items (Selected: 1)</span>
+                </div>
+
+                <div class="explorer-main-content">
+                    
+                    <div class="file-grid" id="photoGallery">
+                        
+                        <div class="file-item active">
+                            <div class="file-thumbnail">
+                                <img src="asset/picture/photography/photo1.jpg" alt="Photo 1">
+                            </div>
+                            <span class="file-name">Lotus.JPG</span>
+                        </div>
+
+                        <div class="file-item">
+                            <div class="file-thumbnail">
+                                <img src="asset/picture/photography/photo2.jpg" alt="Photo 2">
+                            </div>
+                            <span class="file-name">Cat.JPG</span>
+                        </div>
+
+                        <div class="file-item">
+                            <div class="file-thumbnail">
+                                <img src="asset/picture/photography/photo3.jpg" alt="Photo 3">
+                            </div>
+                            <span class="file-name">Beach.JPG</span>
+                        </div>
+
+                        <div class="file-item">
+                            <div class="file-thumbnail">
+                                <img src="asset/picture/photography/photo4.jpg" alt="Photo 4">
+                            </div>
+                            <span class="file-name">Leaf.JPG</span>
+                        </div>
+
+                        <div class="file-item">
+                            <div class="file-thumbnail">
+                                <img src="asset/picture/photography/photo5.jpg" alt="Photo 5">
+                            </div>
+                            <span class="file-name">Box.JPG</span>
+                        </div>
+
+                        <div class="file-item">
+                            <div class="file-thumbnail">
+                                <img src="asset/picture/photography/photo6.jpg" alt="Photo 6">
+                            </div>
+                            <span class="file-name">Tofu.JPG</span>
+                        </div>
+
+                        <div class="file-item">
+                            <div class="file-thumbnail">
+                                <img src="asset/picture/photography/photo7.jpg" alt="Photo 5">
+                            </div>
+                            <span class="file-name">Conch.JPG</span>
+                        </div>
+
+                        <div class="file-item">
+                            <div class="file-thumbnail">
+                                <img src="asset/picture/photography/photo8.jpg" alt="Photo 5">
+                            </div>
+                            <span class="file-name">Bot.JPG</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-status" style="text-align: center; color: #cc66ff; margin-top: 30px; font-weight: bold; line-height: 1.8;">
+                ACCESS LEVEL : CREATOR <br>
+                GALLERY LOADED : 100%
+            </div>
+
+        </main>
+
+        <br>
+        <br>
+
+        <footer class="status-bar">
+            <p class="status-bar-field">Status: ALL SYSTEMS NOMINAL</p>
+            <p class="status-bar-field">Data: IMAGES LOADED</p>
+            <p class="status-bar-field">© 2026 CHUNGZHIXUAN</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+           
+            const titleElement = document.querySelector('.main-title');
+            const originalText = titleElement.innerText;
+            titleElement.innerText = ''; 
+            let i = 0;
+            
+            function typeWriter() {
+                if (i < originalText.length) {
+                    titleElement.innerText += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 60); 
+                }
+            }
+            typeWriter();
+
+            
+            const fileItems = document.querySelectorAll('.file-item');
+
+            fileItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    document.querySelector('.file-item.active')?.classList.remove('active');
+                    item.classList.add('active');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

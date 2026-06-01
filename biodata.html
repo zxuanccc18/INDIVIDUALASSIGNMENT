@@ -1,0 +1,143 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER_INFO | CHUNGZHIXUAN</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="biodata-page">
+
+    <div class="retro-window">
+        
+        <header class="title-bar">
+            <div class="title-bar-text">C:\Users\CHUNG\UserInfo.exe</div>
+            <br>
+            <br>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize">_</button>
+                <button aria-label="Maximize">□</button>
+                <button aria-label="Close">X</button>
+            </div>
+        </header>
+
+        <nav class="nav-links">
+            <a href="index.html" class="nav-btn">DESKTOP</a>
+            <a href="biodata.html" class="nav-btn active">USER_INFO</a>
+            <a href="education.html" class="nav-btn">SCHOOL_LOG</a>
+            <a href="space.html" class="nav-btn">GALAXY_EXE</a>
+            <a href="photography.html" class="nav-btn">CAMERA_ROLL</a>
+            <a href="contact.html" class="nav-btn">SEND_MESSAGE</a>
+            <a href="aboutme.html" class="nav-btn">READ_ME</a>
+            <a href="form.html" class="nav-btn">VERIFICATION_FORM</a>
+        </nav>
+
+            <br>
+            <br>
+        <main class="window-content biodata-section">
+            <h1 class="main-title">:: USER DATA ARCHIVE ::</h1>
+            
+            
+            <div class="profile-container">
+                
+                <div class="profile-pic-frame">
+                    <img src="asset/picture/biodatapic.png" alt="Profile Picture">
+                </div>
+
+              <div class="bio-info">
+    <br>
+    <br>
+
+    <div class="info-row">
+        <span class="label">USERNAME /</span>
+        <span class="value">CHUNG ZHIXUAN</span>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="info-row">
+        <span class="label">BIRTHDAY /</span>
+        <span class="value">25 APRIL 2005</span>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="info-row">
+        <span class="label">GENDER /</span>
+        <span class="value">FEMALE</span>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="info-row">
+        <span class="label">LOCATION /</span>
+        <span class="value">PAHANG, MALAYSIA</span>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="info-row">
+        <span class="label">RELIGION /</span>
+        <span class="value">BUDDHA</span>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="info-row">
+        <span class="label">MBTI /</span>
+        <span class="value">ENTP-T</span>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="info-row">
+        <span class="label">HOBBY /</span>
+        <span class="value">
+        📸 Photography
+        📚 Reading
+        🎨 Editing
+        </span>
+    </div>
+
+</div>
+
+            <div class="user-status" style="text-align: center; color: #cc66ff; margin-top: 30px; font-weight: bold; line-height: 1.8;">
+                ACCESS LEVEL : FRIEND <br>
+                MEMORY LOADED : 25%
+            </div>
+            
+        </main>
+
+        <footer class="status-bar">
+            <p class="status-bar-field">Status: SECURE CONNECTION</p>
+            <p class="status-bar-field">Data: 100% LOADED</p>
+            <p class="status-bar-field">© 2026 CHUNGZHIXUAN</p>
+        </footer>
+
+    </div>
+
+    <script>
+        
+        const titleElement = document.querySelector('.main-title');
+        const originalText = titleElement.innerText;
+        titleElement.innerText = ''; 
+        let i = 0;
+        
+        function typeWriter() {
+            if (i < originalText.length) {
+                titleElement.innerText += originalText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 60); 
+            }
+        }
+        
+        window.onload = typeWriter;
+    </script>
+
+</body>
+</html>

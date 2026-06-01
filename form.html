@@ -1,0 +1,134 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VERIFICATION_FORM | ZXUANCCC</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="space-page">
+
+    <div class="retro-window">
+        
+        <header class="title-bar" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="title-bar-text">C:\Users\CHUNG\System_Form.exe</div>
+            <br>
+            <br>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize">_</button>
+                <button aria-label="Maximize">□</button>
+                <button aria-label="Close">X</button>
+            </div>
+        </header>
+
+        <nav class="nav-links">
+            <a href="index.html" class="nav-btn">DESKTOP</a>
+            <a href="biodata.html" class="nav-btn">USER_INFO</a>
+            <a href="education.html" class="nav-btn">SCHOOL_LOG</a>
+            <a href="space.html" class="nav-btn">GALAXY_EXE</a>
+            <a href="photography.html" class="nav-btn">CAMERA_ROLL</a>
+            <a href="contact.html" class="nav-btn">SEND_MESSAGE</a> 
+            <a href="aboutme.html" class="nav-btn">READ_ME</a> 
+            <a href="form.html" class="nav-btn active">VERIFICATION_FORM</a> 
+        </nav>
+
+        <main class="window-content space-section">
+            
+            <h1 class="main-title">:: INITIATE_FRIENDSHIP_PROTOCOL ::</h1>
+            <p class="terminal-text" style="text-align: center; margin-bottom: 30px; color: #cc66ff;">
+                > SYSTEM PROMPT: Connection sequence initiated. Please input your entity data below...
+            </p>
+
+            <div class="profile-container" style="text-align: center; margin-bottom: 30px;">
+                <div class="profile-pic-frame" style="margin-bottom: 15px;">
+                    <img src="asset/picture/formpic.png" alt="Profile Picture" style="max-width: 500px; border: 2px solid #800080; border-radius: 5px;">
+                </div>
+            </div>
+
+            <div class="cyber-form-container">
+                <form id="friendForm">
+                    
+                    <div class="form-group">
+                        <label class="cyber-label">> USER_NAME:</label>
+                        <input type="text" class="cyber-input" id="username" placeholder="Enter your alias..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="cyber-label">> ENTITY_GENDER:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="gender" value="girl" required> <span>Girl</span></label>
+                            <label><input type="radio" name="gender" value="boy"> <span>Boy</span></label>
+                            <label><input type="radio" name="gender" value="other"> <span>Other</span></label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="cyber-label">> INTERESTS:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="interest" value="eat"> <span>Food</span></label>
+                            <label><input type="checkbox" name="interest" value="shop"> <span>Shopping</span></label>
+                            <label><input type="checkbox" name="interest" value="sport"> <span>Sports</span></label>
+                            <label><input type="checkbox" name="interest" value="idol"> <span>Concert</span></label>
+                            <label><input type="checkbox" name="interest" value="game"> <span>Gaming</span></label>
+                            <label><input type="checkbox" name="interest" value="game"> <span>Media</span></label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="cyber-label">> RELATIONSHIP_LEVEL:</label>
+                        <select class="cyber-input" id="relationship">
+                            <option value="stranger">Stranger</option>
+                            <option value="netizen">Netizen</option>
+                            <option value="bestie">Bestie</option>
+                            <option value="partner">Partner</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="cyber-label">> TRANSMISSION_MESSAGE:</label>
+                        <textarea class="cyber-input" id="message" rows="4" placeholder="Type your signal here..."></textarea>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="submit" class="cyber-submit-btn">UPLOAD_DATA [Send]</button>
+                    </div>
+
+                </form>
+
+                <div id="success-message" style="display: none;">
+                    <p class="success-text">> [OK] TRANSMISSION SUCCESSFUL.</p>
+                    <p class="success-text">> Data uploaded to ZXUANCCC servers. Awaiting response...</p>
+                </div>
+            </div>
+
+        </main>
+
+        <br>
+        <br>
+
+        <footer class="status-bar">
+            <p class="status-bar-field">Status: FORM AWAITING INPUT</p>
+            <p class="status-bar-field">Data: VERIFICATION.EXE LOADED</p>
+            <p class="status-bar-field">© 2026 CHUNGZHIXUAN</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.getElementById('friendForm').addEventListener('submit', function(event) {
+            
+            event.preventDefault(); 
+            
+            
+            this.style.display = 'none';
+            
+           
+            const successMsg = document.getElementById('success-message');
+            successMsg.style.display = 'block';
+            
+           
+            document.querySelector('.status-bar-field').innerText = "Status: DATA TRANSMITTED SUCCESSFULLY";
+        });
+    </script>
+
+</body>
+</html>

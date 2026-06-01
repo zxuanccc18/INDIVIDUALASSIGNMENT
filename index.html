@@ -1,0 +1,122 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESKTOP | CHUNGZHIXUAN</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="home-page">
+
+    <div class="retro-window">
+        
+        <header class="title-bar">
+            <div class="title-bar-text">C:\Users\CHUNG\Desktop.exe</div>
+            <br>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize">_</button>
+                <button aria-label="Maximize">□</button>
+                <button aria-label="Close">X</button>
+            </div>
+        </header>
+    <br>
+    <br>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-btn active">DESKTOP</a>
+            <a href="biodata.html" class="nav-btn">USER_INFO</a>
+            <a href="education.html" class="nav-btn">SCHOOL_LOG</a>
+            <a href="space.html" class="nav-btn">GALAXY_EXE</a>
+            <a href="photography.html" class="nav-btn">CAMERA_ROLL</a>
+            <a href="contact.html" class="nav-btn">SEND_MESSAGE</a>
+            <a href="aboutme.html" class="nav-btn">READ_ME</a>
+            <a href="form.html" class="nav-btn">VERIFICATION_FORM</a>
+        </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+
+        <main class="window-content hero-section">
+            <h1 class="main-title">CHUNG's Locked Memories</h1>
+            
+            <div class="product-display">
+                <img src="asset/picture/websitelayer.png">
+            </div>
+
+       <div class="folder-loading">
+
+    <div class="progress-container">
+        <div class="progress-bar">
+            <span id="percent">0%</span>
+        </div>
+    </div>
+
+    <a href="biodata.html"
+   class="action-btn"
+   id="folderBtn"
+   style="pointer-events:none; opacity:0.5;">
+    Loading Folder...
+    </a>
+    
+</div>
+
+    <br>
+    <br>
+    <br>
+
+            <div class="media-player">
+                <audio controls autoplay loop>
+                    <source src="asset/music/TSBM_JB.mp3" type="audio/mpeg">
+                    <source src="asset/music/TSBM_JB.ogg" type="audio/ogg">
+                </audio>
+            </div>
+        </main>
+
+        <footer class="status-bar">
+            <p class="status-bar-field">Status: ONLINE</p>
+            <p class="status-bar-field">© 2026 Designed by CHUNGZHIXUAN</p>
+            <p class="status-bar-field">Contact: 011-74910691</p>
+        </footer>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <script>
+        
+
+        
+let progress = 0;
+
+const bar = document.querySelector(".progress-bar");
+const percent = document.getElementById("percent");
+const button = document.getElementById("folderBtn");
+
+const loading = setInterval(() => {
+
+    if(progress <= 100){
+
+        bar.style.width = progress + "%";
+        percent.innerHTML = progress + "%";
+
+        progress++;
+
+    }else{
+
+        clearInterval(loading);
+
+        
+        button.style.pointerEvents = "auto";
+        button.style.opacity = "1";
+
+        
+        button.innerHTML = "Click to open this folder";
+
+    }
+
+}, 40);
+</script>
+
+</body>
+</html>
