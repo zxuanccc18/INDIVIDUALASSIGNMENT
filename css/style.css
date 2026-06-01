@@ -906,14 +906,15 @@ formpart
 .music-btn{
     display:inline-block;
     margin-top:10px;
-    padding:8px 12px;
+    padding:8px 15px;
     background:#800080;
     color:white;
     text-decoration:none;
-    border-radius:5px;
+    border:2px solid #cc66ff;
+    border-radius:4px;
     font-size:12px;
 }
 
 .music-btn:hover{
-    background:#a020f0;
+    background:#cc66ff;
 }
